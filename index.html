@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ENT Clinic Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">ENT Clinic Management System</div>
+    <nav>
+      <button data-section="patient-management" class="active">Patient Management</button>
+      <button data-section="appointment-management">Appointment Management</button>
+      <button data-section="opd-consultation">OPD Consultation</button>
+      <button data-section="ent-examination">ENT Examination</button>
+      <button data-section="phonosurgery">Phonosurgery</button>
+      <button data-section="balance-disorder">Balance Disorder</button>
+      <button data-section="audiology">Audiology</button>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-card">
+      <h1>Smart ENT Clinic Workflow</h1>
+      <p>Manage patients, appointments, consultations, ENT exams, phonosurgery, balance care, and audiology data in one responsive dashboard.</p>
+    </div>
+  </section>
+  <section class="dashboard-grid">
+    <article class="stat-card stat-patients">
+      <span class="stat-label">Patients</span>
+      <strong id="stats-patients">0</strong>
+      <p>Active patient records stored locally.</p>
+    </article>
+    <article class="stat-card stat-appointments">
+      <span class="stat-label">Appointments</span>
+      <strong id="stats-appointments">0</strong>
+      <p>Upcoming and completed schedule entries.</p>
+    </article>
+    <article class="stat-card stat-consultations">
+      <span class="stat-label">Consultations</span>
+      <strong id="stats-consultations">0</strong>
+      <p>Doctor notes and treatment plans.</p>
+    </article>
+    <article class="stat-card stat-audiology">
+      <span class="stat-label">Audiology</span>
+      <strong id="stats-audiology">0</strong>
+      <p>Hearing records and audiogram results.</p>
+    </article>
+  </section>
+  <main>
+    <section id="patient-management" class="panel active">
+      <h2>Module 1: Patient Management</h2>
+      <form id="patient-form" class="card">
+        <div class="field-group"><label>Full Name</label><input type="text" id="patient-fullName" required /></div>
+        <div class="field-group"><label>Age</label><input type="number" id="patient-age" min="0" required /></div>
+        <div class="field-group"><label>Gender</label><select id="patient-gender" required><option value="">Select</option><option>Male</option><option>Female</option><option>Other</option></select></div>
+        <div class="field-group"><label>DOB</label><input type="date" id="patient-dob" required /></div>
+        <div class="field-group"><label>Mobile Number</label><input type="tel" id="patient-mobile" required /></div>
+        <div class="field-group"><label>Email</label><input type="email" id="patient-email" /></div>
+        <div class="field-group"><label>Address</label><textarea id="patient-address"></textarea></div>
+        <div class="field-group"><label>Blood Group</label><input type="text" id="patient-bloodGroup" /></div>
+        <div class="field-group"><label>Allergies</label><input type="text" id="patient-allergies" /></div>
+        <div class="field-group"><label>Past Medical History</label><textarea id="patient-history"></textarea></div>
+        <button type="submit">Save Patient</button>
+      </form>
+      <div class="record-list">
+        <div class="record-header">
+          <h3>Saved Patients</h3>
+          <button id="patient-details-clear" class="outline-button hidden">Hide Details</button>
+        </div>
+        <table id="patient-table"><thead><tr><th>ID</th><th>Name</th><th>Age</th><th>Gender</th><th>Mobile</th><th>Email</th><th>Action</th></tr></thead><tbody></tbody></table>
+        <div id="patient-details" class="detail-card hidden"></div>
+      </div>
+    </section>
+
+    <section id="appointment-management" class="panel">
+      <h2>Module 2: Appointment Management</h2>
+      <form id="appointment-form" class="card">
+        <div class="field-group"><label>Patient ID</label><input type="text" id="appointment-patientId" required /></div>
+        <div class="field-group"><label>Doctor Name</label><input type="text" id="appointment-doctor" required /></div>
+        <div class="field-group"><label>Date</label><input type="date" id="appointment-date" required /></div>
+        <div class="field-group"><label>Time Slot</label><input type="time" id="appointment-time" required /></div>
+        <div class="field-group"><label>Visit Type</label><select id="appointment-type" required><option value="">Select</option><option>New</option><option>Follow-up</option></select></div>
+        <div class="field-group"><label>Status</label><select id="appointment-status" required><option value="">Select</option><option>Scheduled</option><option>Completed</option><option>Cancelled</option></select></div>
+        <button type="submit">Save Appointment</button>
+      </form>
+      <div class="record-list">
+        <h3>Saved Appointments</h3>
+        <table id="appointment-table"><thead><tr><th>ID</th><th>Patient</th><th>Doctor</th><th>Date</th><th>Time</th><th>Type</th><th>Status</th></tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+
+    <section id="opd-consultation" class="panel">
+      <h2>Module 3: OPD Consultation</h2>
+      <form id="consultation-form" class="card">
+        <div class="field-group"><label>Patient ID</label><input type="text" id="consultation-patientId" required /></div>
+        <div class="field-group"><label>Chief Complaints</label><textarea id="consultation-complaints"></textarea></div>
+        <div class="field-group"><label>Symptoms</label><textarea id="consultation-symptoms"></textarea></div>
+        <div class="field-group"><label>Diagnosis</label><textarea id="consultation-diagnosis"></textarea></div>
+        <div class="field-group"><label>Observations</label><textarea id="consultation-observations"></textarea></div>
+        <div class="field-group"><label>Treatment Plan</label><textarea id="consultation-treatment"></textarea></div>
+        <div class="field-group"><label>Follow-up Date</label><input type="date" id="consultation-followup" /></div>
+        <button type="submit">Save Consultation</button>
+      </form>
+      <div class="record-list">
+        <h3>Saved Consultations</h3>
+        <table id="consultation-table"><thead><tr><th>ID</th><th>Patient</th><th>Diagnosis</th><th>Follow-up</th></tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+
+    <section id="ent-examination" class="panel">
+      <h2>Module 4: ENT Examination</h2>
+      <form id="ent-form" class="card">
+        <div class="field-group"><label>Patient ID</label><input type="text" id="ent-patientId" required /></div>
+        <div class="field-group"><label>Ear Examination Notes</label><textarea id="ent-ear"></textarea></div>
+        <div class="field-group"><label>Nose Examination Notes</label><textarea id="ent-nose"></textarea></div>
+        <div class="field-group"><label>Throat Examination Notes</label><textarea id="ent-throat"></textarea></div>
+        <div class="field-group"><label>Larynx Findings</label><textarea id="ent-larynx"></textarea></div>
+        <div class="field-group"><label>Remarks</label><textarea id="ent-remarks"></textarea></div>
+        <button type="submit">Save ENT Exam</button>
+      </form>
+      <div class="record-list">
+        <h3>Saved ENT Exams</h3>
+        <table id="ent-table"><thead><tr><th>ID</th><th>Patient</th><th>Ear</th><th>Nose</th><th>Throat</th></tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+
+    <section id="phonosurgery" class="panel">
+      <h2>Module 5: Phonosurgery</h2>
+      <form id="phonosurgery-form" class="card">
+        <div class="field-group"><label>Patient ID</label><input type="text" id="phono-patientId" required /></div>
+        <div class="field-group"><label>Voice Disorder Type</label><input type="text" id="phono-disorder" /></div>
+        <div class="field-group"><label>Vocal Cord Status</label><input type="text" id="phono-vocalCord" /></div>
+        <div class="field-group"><label>Procedure Suggested</label><textarea id="phono-procedure"></textarea></div>
+        <div class="field-group"><label>Pre-op Notes</label><textarea id="phono-preop"></textarea></div>
+        <div class="field-group"><label>Post-op Notes</label><textarea id="phono-postop"></textarea></div>
+        <button type="submit">Save Phonosurgery</button>
+      </form>
+      <div class="record-list">
+        <h3>Saved Phonosurgery Records</h3>
+        <table id="phonosurgery-table"><thead><tr><th>ID</th><th>Patient</th><th>Disorder</th><th>Procedure</th></tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+
+    <section id="balance-disorder" class="panel">
+      <h2>Module 6: Balance Disorder</h2>
+      <form id="balance-form" class="card">
+        <div class="field-group"><label>Patient ID</label><input type="text" id="balance-patientId" required /></div>
+        <div class="field-group"><label>Symptoms</label><textarea id="balance-symptoms"></textarea></div>
+        <div class="field-group"><label>Test Results</label><textarea id="balance-tests"></textarea></div>
+        <div class="field-group"><label>Diagnosis</label><textarea id="balance-diagnosis"></textarea></div>
+        <div class="field-group"><label>Treatment</label><textarea id="balance-treatment"></textarea></div>
+        <button type="submit">Save Balance Record</button>
+      </form>
+      <div class="record-list">
+        <h3>Saved Balance Disorder Records</h3>
+        <table id="balance-table"><thead><tr><th>ID</th><th>Patient</th><th>Symptoms</th><th>Diagnosis</th></tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+
+    <section id="audiology" class="panel">
+      <h2>Module 7: Audiology</h2>
+      <form id="audiology-form" class="card">
+        <div class="field-group"><label>Patient ID</label><input type="text" id="audio-patientId" required /></div>
+        <div class="field-group"><label>Left Ear dB Level</label><input type="number" id="audio-leftDb" /></div>
+        <div class="field-group"><label>Right Ear dB Level</label><input type="number" id="audio-rightDb" /></div>
+        <div class="field-group"><label>Hearing Loss Type</label><input type="text" id="audio-lossType" /></div>
+        <div class="field-group"><label>Diagnosis</label><textarea id="audio-diagnosis"></textarea></div>
+        <button type="submit">Save Audiology Record</button>
+      </form>
+      <div class="record-list">
+        <h3>Saved Audiology Records</h3>
+        <table id="audiology-table"><thead><tr><th>ID</th><th>Patient</th><th>Left dB</th><th>Right dB</th><th>Loss Type</th></tr></thead><tbody></tbody></table>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

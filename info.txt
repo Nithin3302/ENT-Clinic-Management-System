@@ -1,0 +1,129 @@
+CLIENT PROPOSAL DOCUMENT
+Project Title:
+Web-Based ENT Clinic Management System
+Client:
+Dr. Gautham Kulamarva – ENT & Head-Neck Center
+________________________________________
+ 1. PROPOSAL OVERVIEW
+We propose to develop a comprehensive, web-based ENT Clinic Management System designed to streamline clinical operations, improve patient care, and digitize medical workflows.
+This system will support:
+•	Patient lifecycle management 
+•	ENT-specific diagnostics (Audiology, Balance, Phonosurgery) 
+•	Electronic Medical Records (EMR) 
+•	Billing and reporting 
+•	AI-assisted diagnosis (optional advanced feature) 
+________________________________________
+ 2. OBJECTIVES
+•	Digitize patient records 
+•	Improve diagnostic efficiency 
+•	Provide centralized ENT care management 
+•	Enable teleconsultation 
+•	Ensure accurate billing and reporting 
+________________________________________
+ 3. SYSTEM SCOPE
+The system will cover:
+•	Patient registration → Consultation → Diagnosis → Treatment → Billing 
+•	Integration of ENT subspecialties 
+•	Secure and role-based access 
+________________________________________
+ 4. KEY FEATURES
+•	Electronic Medical Records (EMR) 
+•	Appointment scheduling 
+•	Audiology & diagnostic integration 
+•	Prescription management 
+•	Telemedicine support 
+________________________________________
+ 5. ESTIMATED TIMELINE
+•	Requirement Analysis: 5 Days 
+•	Development: 30–45 Days 
+•	Testing & Deployment: 10 Days 
+________________________________________
+7. SECURITY & COMPLIANCE
+•	Role-based access 
+•	Secure patient data storage 
+•	Backup & recovery 
+________________________________________
+ DETAILED SOFTWARE REQUIREMENT SPECIFICATION (SRS)
+________________________________________
+ MODULE 1: PATIENT MANAGEMENT
+Description:
+Manages complete patient registration and demographic data.
+Page: Add Patient
+Fields:
+•	Patient ID (Auto) 
+•	Full Name 
+•	Age 
+•	Gender 
+•	DOB 
+•	Mobile Number 
+•	Email 
+•	Address 
+•	Blood Group 
+•	Allergies 
+•	Past Medical History 
+•	Registration Date 
+________________________________________
+ MODULE 2: APPOINTMENT MANAGEMENT
+Description:
+Schedules and manages patient appointments.
+Page: Book Appointment
+Fields:
+•	Appointment ID 
+•	Patient ID 
+•	Doctor Name 
+•	Date 
+•	Time Slot 
+•	Visit Type (New / Follow-up) 
+•	Status 
+________________________________________
+ MODULE 3: OPD CONSULTATION
+Description:
+Records doctor consultation details.
+Page: Consultation Entry
+Fields:
+•	Patient ID 
+•	Chief Complaints 
+•	Symptoms 
+•	Diagnosis 
+•	Observations 
+•	Treatment Plan 
+•	Follow-up Date 
+________________________________________
+MODULE 4: ENT EXAMINATION
+Description:
+Captures ENT-specific examination findings.
+Fields:
+•	Ear Examination Notes 
+•	Nose Examination Notes 
+•	Throat Examination Notes 
+•	Larynx Findings 
+•	Remarks 
+________________________________________
+MODULE 5: PHONOSURGERY
+Description:
+Manages voice-related disorders and treatment.
+Fields:
+•	Voice Disorder Type 
+•	Vocal Cord Status 
+•	Procedure Suggested 
+•	Pre-op Notes 
+•	Post-op Notes 
+________________________________________
+ MODULE 6: BALANCE DISORDER
+Description:
+Handles vertigo and balance disorder diagnosis.
+Fields:
+•	Symptoms (Vertigo, Dizziness) 
+•	Test Results 
+•	Diagnosis 
+•	Treatment 
+________________________________________
+ MODULE 7: AUDIOLOGY
+Description:
+Stores hearing test and audiogram data.
+Fields:
+•	Audiogram Upload 
+•	Left Ear dB Level 
+•	Right Ear dB Level 
+•	Hearing Loss Type 
+•	Diagnosis 
