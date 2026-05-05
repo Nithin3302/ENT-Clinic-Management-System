@@ -10,11 +10,36 @@ A simple web prototype for the ENT Clinic Management System covering:
 - Module 6: Balance Disorder
 - Module 7: Audiology
 
-## How to use
+## Getting Started
 
-1. Open `index.html` in a browser.
+### Prerequisites
+
+- Git installed on your machine. You can download it from [git-scm.com](https://git-scm.com/).
+
+### Cloning the Repository
+
+1. Open your terminal or command prompt.
+
+2. Run the following command to clone the repository:
+
+   ```
+   git clone https://github.com/Nithin3302/ENT-Clinic-Management-System.git
+   ```
+
+3. Navigate into the project directory:
+
+   ```
+   cd ENT-Clinic-Management-System
+   ```
+
+### Running the Application
+
+1. Open the `index.html` file in your web browser (e.g., double-click the file or right-click and select "Open with" your preferred browser).
+
 2. Use the top menu to switch between modules.
+
 3. Enter data in each form and click `Save`.
+
 4. Saved records are stored in browser `localStorage`.
 
 ## Files
